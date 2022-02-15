@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+.container{
+    margin: 100px 200px;
+    width: 330px;
+    height: 330px;
+}
+.container .cubo{
+    width: 330px;
+    height: 330px;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1000000px;
+}
+.container .cubo .face{
+    position: absolute;
+    width: 330px;
+    height: 330px;
+    border: solid 0.5px black;
+}
+.container .cubo .front{
+    transform: translateZ(165px);
+    background-color: rgba(13, 13, 167, 0.589);
+}
+.container .cubo .back{
+    transform: translateZ(-165px);
+    background-color: rgba(17, 226, 139, 0.733);
+}
+.container .cubo .left{
+    transform: rotateY(90deg) translateZ(-165px);
+    background-color: rgba(255, 17, 0, 0.63);
+}
+.container .cubo .right{
+    transform: rotateY(90deg) translateZ(165px);
+    background-color: rgba(81, 255, 0, 0.685);
+}
+.container .cubo .top{
+    transform: rotateX(90deg) translateZ(165px);
+    background-color: rgba(255, 153, 0, 0.664);
+}
+.container .cubo .bottom{
+    transform: rotateX(90deg) translateZ(-165px);
+    background-color: rgba(255, 0, 212, 0.575);
+}
+.cubo:hover{
+    transform: rotateX(2turn) rotateY(2turn);
+    transition: transform 9s linear;
+}
